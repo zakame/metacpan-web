@@ -8,7 +8,9 @@
   }
 
   $.relatizeDate = function(element) {
-    return $.relatizeDate.timeAgoInWords( new Date($(element).text()) )
+    var date = new Date($(element).text());
+    if(date.getDate().toString() == 'NaN') return '';
+    return $.relatizeDate.timeAgoInWords( date )
   }
 
   // shortcut

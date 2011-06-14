@@ -17,14 +17,17 @@
   <hr>
   <strong>Info</strong>
   <ul>
+    <%- IF !module.directory %>
     <li><% module.sloc %> lines of code</li>
     <li><% module.slop %> lines of pod</li>
+    <% END %>
     <li><% module.stat.size | format_bytes %></li>
   </ul>
 </div>
 
 <div class="content">
-<pre class="brush: pl; class-name: 'highlight'; toolbar: false;" id="source"><% source %></pre>
+    <%- IF module.directory %><div class="browse"><% source.replace("class='mtime'", "class='mtime relatize'") | none %></div><% ELSE %>
+<pre class="brush: pl; class-name: 'highlight'; toolbar: false;" id="source"><% source %></pre><% END %>
 </div>
 
 <script type="text/javascript">

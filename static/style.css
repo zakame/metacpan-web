@@ -492,3 +492,16 @@ code { font-family: monospace; }
 .rating-50 {
     background-position: 0px -190px;
 }
+
+.browse td {
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.browse th, .browse .name {
+    font-weight: bold;
+}
+
+.browse .mtime,.browse .size,.browse .type {
+    text-align: right
+}
