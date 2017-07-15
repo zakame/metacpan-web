@@ -105,7 +105,7 @@ $(function () {
         var packageMatch;
         // avoid highlighting excessively large blocks of code as they will take
         // too long, causing browsers to lag and offer to kill the script
-        if (source.html().length > 500000) {
+        if (source.html().length > 150000) {
             source.children('code').removeClass();
         }
         // save highlighted lines in an attribute, to be used later
